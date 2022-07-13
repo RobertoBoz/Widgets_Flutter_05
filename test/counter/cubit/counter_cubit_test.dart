@@ -17,14 +17,14 @@ void main() {
     });
 
     blocTest<CounterCubit, int>(
-      'emits [1] when increment is called',
+      'emits [2] when increment is called',
       build: CounterCubit.new,
       act: (cubit) => cubit.increment(),
       expect: () => [equals(2)],
     );
 
     blocTest<CounterCubit, int>(
-      'emits [-1] when decrement is called',
+      'emits [-2] when decrement is called',
       build: CounterCubit.new,
       act: (cubit) => cubit.decrement(),
       expect: () => [equals(-2)],
